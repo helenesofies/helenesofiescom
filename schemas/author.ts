@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'author',
@@ -8,6 +8,11 @@ export default defineType({
     defineField({
       name: 'name',
       title: 'Name',
+      type: 'string',
+    }),
+    defineField({
+      name: 'nickname',
+      title: 'Nickname',
       type: 'string',
     }),
     defineField({
@@ -35,7 +40,7 @@ export default defineType({
         {
           title: 'Block',
           type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
+          styles: [{ title: 'Normal', value: 'normal' }],
           lists: [],
         },
       ],
