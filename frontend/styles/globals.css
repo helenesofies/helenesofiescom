@@ -1,29 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&display=swap');
 
 :root {
-  background-color: antiquewhite;
+
+  /*Color selection*/
+  --background-color: white;
+  --accent-color: blue;
+
+  /* Fonts */
   font-size: 10px;
-  padding: 5%;
+  --cursive-font:'Rowdies', sans-serif;;
+  --article-font: 16px;
+
+
 }
 
-body{
-  width: 60%;
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 100px;
-  font-family: 'Elsie Swash Caps';
-}
-
-img {
-  border-radius: 4px;
-  border: 2px solid #9e178c;
+  font-size: 80px;
+  font-family: var(--cursive-font);
 }
 
 h2 {
   font-size: 20px;
 }
 
+h3{
+  margin-top: 32px;
+  font-size: 20px;
+}
+
+/*LANDING PAGE*/
+.mainLanding{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  color: #DF0732;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+/* ARTICLE CSS */
+.post {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainImage {
+  z-index: -1;
+  padding-top: 0px;
+  height: 70vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+}
+
+.article{
+  z-index: 1;
+  background-color: var(--background-color);
+  font-size: var(--article-font);
+  width: 900px;
+  margin-left: 180px;
+  margin-top: 50vh;
+  padding: 64px;
+  box-shadow: 5px 6px 8px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  border: 2px solid #DDE1F8;
+  
+}
+
+.introduction{
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 60px;
+  padding: 40px;
+  padding-left: 24px;
+  background-color: #DDE1F8;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.authorImage{
+  width: 64px;
+  border-radius: 50%;
+}
+
+.categories{
+  display: inline-flex;
+}
+
+.projectDate{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+}
+
+.lineContainer{
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+svg{
+  display: inline-block;
+  height: 100%;
+}
+
+.path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

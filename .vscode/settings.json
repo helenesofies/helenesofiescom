@@ -1,0 +1,27 @@
+{
+  "files.exclude": {
+    ".eslintrc": true,
+    ".git": true,
+    ".gitignore": true,
+    "dist": true,
+    "node_modules": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "**/tsconfig": true,
+    "**/tsconfig.*": true,
+    "frontend/package-lock.json": true,
+    "frontend/.eslintrc.json": true,
+    "frontend/.gitignore": true,
+    "frontend/client.ts": true,
+    "frontend/next.config.js": true,
+    "frontend/package.json": true,
+    "frontend/tailwind.config.ts": true,
+    "frontend/tsconfig.json": true,
+    "frontend/postcss.config.js": true,
+    "static": true,
+    "static/.gitkeep": true,
+    "sanity.cli.ts": true,
+    "frontend/next-env.d.ts": true,
+    "frontend/node_modules": true
+  }
+}

@@ -6,18 +6,27 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'mainImage',
+      title: 'Main image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      name: 'ingress',
+      title: 'Ingress',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
     }),
     defineField({
       name: 'author',
@@ -26,12 +35,10 @@ export default defineType({
       to: {type: 'author'},
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'collaborators',
+      title: 'Collaborators',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'collaborators'}}],
     }),
     defineField({
       name: 'categories',
@@ -45,9 +52,13 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
     }),
   ],
 
